@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Nathan Suyat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .resume-container {
+            width: 70%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white; /* Default background color */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.5s ease; /* Smooth transition for color change */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .content h2 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="resume-container" class="resume-container">
+        <div class="header">
+            <img src="profile.JPG" alt="Nathan Suyat" class="profile-pic">
+            <h1>Nathan Suyat</h1>
+            <p>Address: Made-up Address, Manila, Philippines</p>
+            <p>Contact No.: +63 906 067 3844</p>
+            <p>Email: Nssuyat820@gmail.com</p>
+        </div>
+        <div class="content">
+            <h2>Objective</h2>
+            <p>To enhance my skills in web design and development by creating innovative and interactive web applications.</p>
+
+            <h2>Academic Background</h2>
+            <ul>
+                <li><strong>College:</strong> FEU Diliman</li>
+                <li><strong>High School:</strong> Good Shepherd Cathedral School</li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Web Design and Development</li>
+                <li>Responsive Design</li>
+            </ul>
+        </div>
+        <button id="color-button" onclick="changeColor()">Change Color</button>
+    </div>
+
+    <script>
+        // Array of colors to cycle through
+        const colors = ["orange", "green", "blue", "yellow"];
+        let currentColorIndex = 0;
+
+        function changeColor() {
+            // Get the resume container element
+            const resumeContainer = document.getElementById("resume-container");
+
+            // Set the background color to the current color
+            resumeContainer.style.backgroundColor = colors[currentColorIndex];
+
+            // Move to the next color in the array
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+    </script> 
+</body>
+</html>
